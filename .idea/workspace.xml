@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8f04e8-428e-46d6-afac-d93d8948bf0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/querys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/querys.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/pc/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/es/pc/AppTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="7b8f04e8-428e-46d6-afac-d93d8948bf0c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,10 +142,10 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="-24" y="17" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1594822762479" />
-    <state x="104" y="96" key="Vcs.Push.Dialog.v2" timestamp="1594913127954">
+    <state x="104" y="96" key="Vcs.Push.Dialog.v2" timestamp="1594913448718">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="96" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1594913127954" />
+    <state x="104" y="96" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1594913448718" />
     <state x="242" y="152" key="git4idea.merge.GitPullDialog" timestamp="1594823829995">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
