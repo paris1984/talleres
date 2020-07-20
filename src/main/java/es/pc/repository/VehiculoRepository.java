@@ -4,4 +4,5 @@ import es.pc.entity.VehiculoEntity;
 
 public interface VehiculoRepository {
     void save(VehiculoEntity entity);
+    VehiculoEntity getVehiculo(String matricula);
 }
