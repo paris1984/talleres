@@ -1,6 +1,6 @@
 drop table vehiculos;
 
-create table vehiculos(
+create table IF NOT EXISTS vehiculos(
 matricula varchar(15) primary key,
 tipo      varchar(20)
 );
