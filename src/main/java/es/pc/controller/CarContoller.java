@@ -1,5 +1,6 @@
 package es.pc.controller;
 
+import es.pc.entity.VehiculoEntity;
 import es.pc.service.VehiculoService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,8 +26,8 @@ public class CarContoller {
 
 
     @GetMapping("/taller/vehiculo/{matricula}/get_car")
-    public void getCar(@PathVariable("matricula") String matricula){
+    public VehiculoEntity getCar(@PathVariable("matricula") String matricula){
         log.info("Matricula:"+matricula);
-        vehiculoService.getVehiculo(matricula);
+        return vehiculoService.getVehiculo(matricula);
     }
 }

@@ -32,7 +32,7 @@ public class VehiculoRepositoryImpl implements VehiculoRepository {
 
     @Override
     public VehiculoEntity getVehiculo(String matricula) {
-
+        VehiculoEntity entity=null;
         try {
              PreparedStatement pstmt  = conn.prepareStatement(SqlConstants.SELECT_VEHICULO);
              pstmt.setString(1, matricula);
@@ -40,6 +40,7 @@ public class VehiculoRepositoryImpl implements VehiculoRepository {
 
             // loop through the result set
             while (rs.next()) {
+                entity = VehiculoEntity.builder().matricula(rs.getString("matricula")).tipo(rs.getString("tipo")).build();
                 System.out.println(
                         rs.getString("matricula") + "\t" +
                         rs.getString("tipo"));
@@ -47,6 +48,6 @@ public class VehiculoRepositoryImpl implements VehiculoRepository {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return null;
+        return entity;
     }
 }

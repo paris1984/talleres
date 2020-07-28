@@ -18,7 +18,7 @@ public class VehiculoServiceimpl implements VehiculoService {
     }
 
     @Override
-    public void getVehiculo(String matricula) {
-        vehiculoRepository.getVehiculo(matricula);
+    public VehiculoEntity getVehiculo(String matricula) {
+        return vehiculoRepository.getVehiculo(matricula);
     }
 }
