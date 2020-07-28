@@ -16,4 +16,9 @@ public class VehiculoServiceimpl implements VehiculoService {
 
         vehiculoRepository.save(VehiculoEntity.builder().matricula(matricula).tipo(tipo).build());
     }
+
+    @Override
+    public void getVehiculo(String matricula) {
+        vehiculoRepository.getVehiculo(matricula);
+    }
 }

@@ -22,8 +22,11 @@ public class CarContoller {
         return "OK";
     }
 
-    @GetMapping("/taller/vehiculo/{matricula}/alta")
-    public void getCar(@PathVariable("matricula") String matricula){
 
+
+    @GetMapping("/taller/vehiculo/{matricula}/get_car")
+    public void getCar(@PathVariable("matricula") String matricula){
+        log.info("Matricula:"+matricula);
+        vehiculoService.getVehiculo(matricula);
     }
 }

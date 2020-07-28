@@ -42,7 +42,7 @@ public class VehiculoRepositoryImpl implements VehiculoRepository {
             while (rs.next()) {
                 System.out.println(
                         rs.getString("matricula") + "\t" +
-                        rs.getDouble("tipo"));
+                        rs.getString("tipo"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
