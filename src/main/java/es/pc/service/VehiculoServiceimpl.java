@@ -5,6 +5,8 @@ import es.pc.repository.VehiculoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @AllArgsConstructor
 public class VehiculoServiceimpl implements VehiculoService {
@@ -21,4 +23,7 @@ public class VehiculoServiceimpl implements VehiculoService {
     public VehiculoEntity getVehiculo(String matricula) {
         return vehiculoRepository.getVehiculo(matricula);
     }
+
+    @Override
+    public List<VehiculoEntity> getVehiculos() { return vehiculoRepository.getVehiculos(); }
 }
