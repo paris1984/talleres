@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @Slf4j
 @AllArgsConstructor
@@ -29,5 +31,11 @@ public class CarContoller {
     public VehiculoEntity getCar(@PathVariable("matricula") String matricula){
         log.info("Matricula:"+matricula);
         return vehiculoService.getVehiculo(matricula);
+    }
+
+    @GetMapping("/taller/vehiculo/cars")
+    public List<VehiculoEntity> getVehiculos(){
+        //log.info("Matricula:"+matricula);
+        return vehiculoService.getVehiculos();
     }
 }

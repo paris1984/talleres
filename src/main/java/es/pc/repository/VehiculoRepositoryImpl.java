@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 @AllArgsConstructor
@@ -50,4 +52,26 @@ public class VehiculoRepositoryImpl implements VehiculoRepository {
         }
         return entity;
     }
+    @Override
+    public List<VehiculoEntity> getVehiculos (){
+        VehiculoEntity entity=null;
+        List<VehiculoEntity> entityList = new ArrayList<>();
+        try {
+            PreparedStatement pstmt  = conn.prepareStatement(SqlConstants.SELECT_ALL);
+            //pstmt.setString(1, matricula);
+            ResultSet rs    = pstmt.executeQuery();
+
+            while (rs.next()) {
+                entity = VehiculoEntity.builder().matricula(rs.getString("matricula")).tipo(rs.getString("tipo")).build();
+                entityList.add(entity);
+                System.out.println(
+                        rs.getString("matricula") + "\t" +
+                                rs.getString("tipo"));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return entityList;
+    }
+
 }
