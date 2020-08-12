@@ -1,6 +1,7 @@
 package es.pc.service;
 
 import es.pc.entity.VehiculoEntity;
+import es.pc.exception.BusinessException;
 import es.pc.repository.VehiculoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -21,7 +22,12 @@ public class VehiculoServiceimpl implements VehiculoService {
 
     @Override
     public VehiculoEntity getVehiculo(String matricula) {
-        return vehiculoRepository.getVehiculo(matricula);
+
+        VehiculoEntity vehiculo = vehiculoRepository.getVehiculo(matricula);
+        if(vehiculo==null){
+            throw new BusinessException("Not found","404");
+        }
+        return vehiculo;
     }
 
     @Override
